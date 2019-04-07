@@ -7,11 +7,18 @@ using UnityEngine;
  */
 public class GuardMovement : MonoBehaviour
 {
-
+    // Positions that the guard should cycle between
     [SerializeField] private Transform[] guardPositions;
+    // Angles that the guard should rotate along z-axis to keep line of sight, once reach the above positions.
+    // Should be the same length as guardPositions -- not great code, but works for now
+    [SerializeField] private float[] transformAngles;
+    // The angle to rotate once you finish the cycle
+    [SerializeField] private float firstAngle;
+    // The speed to move at
     [SerializeField] private float speed;
 
     private int i = 0;
+    private Vector2 previousPosition;
     private Vector2 nextPosition;
 
     private Vector2 originalPosition;
@@ -19,6 +26,7 @@ public class GuardMovement : MonoBehaviour
     void Start()
     {
         originalPosition = this.transform.position;
+        previousPosition = originalPosition;
     }
 
     // Update is called once per frame
@@ -33,14 +41,12 @@ public class GuardMovement : MonoBehaviour
 
         if (hasArrived(nextPosition, 0.05f))
         {
-            if(i >= guardPositions.Length)
-            {
-                i = 0;
-            }
-            else
-            {
-                i++;
-            }
+            i = i >= guardPositions.Length? 0 : ++i;
+            float rotationAngle = nextPosition.Equals(originalPosition) ? transformAngles[i] : firstAngle;
+            transform.Rotate(0, 0, rotationAngle);
+
+
+            previousPosition = this.transform.position;
         }
     }
 
