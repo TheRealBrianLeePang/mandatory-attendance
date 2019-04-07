@@ -5,7 +5,9 @@ using UnityEngine;
 public class GuardSight : MonoBehaviour
 {
 
+    [SerializeField] private float distance;
     LineRenderer lineRenderer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,14 @@ public class GuardSight : MonoBehaviour
         if(hit.collider != null) {
             if (hit.collider.CompareTag("Player"))
             {
-                Debug.DrawLine(transform.position, hit.point, Color.red);
+                if(Vector2.Distance(transform.position, hit.point) <= distance)
+                {
+                    Debug.DrawLine(transform.position, hit.point, Color.red);
+                }
+                else
+                {
+                    Debug.DrawLine(transform.position, hit.point, Color.yellow);
+                }
             }
             else
             {
