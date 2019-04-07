@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 55f418c678eda419e864a8eccdaf5594, type: 2}
+  - {fileID: 2100000, guid: 51452b816dafb4d4dbacbe2f8347a5b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -207,6 +207,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  transformAngles: []
+  firstAngle: 0
   speed: 15
 --- !u!114 &5317149217288596468
 MonoBehaviour:
@@ -220,3 +222,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76482b7a22ad43fbbd92de8cd71b295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 0
