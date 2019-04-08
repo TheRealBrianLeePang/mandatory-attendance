@@ -6,9 +6,16 @@ public class RotatingCamera : MonoBehaviour
 {
 
     [SerializeField] private float rotationRate;
+    [SerializeField] private GameObject player;
 
     private float currentAngle = 0;
-  
+    private Vector2 initialPos;
+
+    void Start()
+    {
+        initialPos = player.transform.position;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -18,6 +25,7 @@ public class RotatingCamera : MonoBehaviour
             if (hit.collider.CompareTag("Player"))
             {
                 Debug.DrawLine(transform.position, hit.point, Color.red);
+                player.transform.position = initialPos;
             }
             else
             {

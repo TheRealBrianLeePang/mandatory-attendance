@@ -6,12 +6,15 @@ public class GuardSight : MonoBehaviour
 {
 
     [SerializeField] private float distance;
+    [SerializeField] private GameObject player;
     LineRenderer lineRenderer;
+    Vector2 initialPlayerPosition;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        initialPlayerPosition = player.transform.position;
         lineRenderer = GetComponent<LineRenderer>();
     }
 
@@ -30,6 +33,7 @@ public class GuardSight : MonoBehaviour
                 if(Vector2.Distance(transform.position, hit.point) <= distance)
                 {
                     Debug.DrawLine(transform.position, hit.point, Color.red);
+                    player.transform.position = initialPlayerPosition;
                 }
                 else
                 {

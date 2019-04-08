@@ -6,8 +6,15 @@ public class TransitioningCamera : MonoBehaviour
 {
     [SerializeField] private float[] angleTransitions;
     [SerializeField] private float waitTime;
+    [SerializeField] private GameObject player;
     private float currTime = 0;
+    private Vector2 initialPos;
     private int i = 0;
+
+    void Start()
+    {
+        initialPos = player.transform.position;
+    }
 
     // Update is called once per frame
     void Update()
@@ -19,6 +26,7 @@ public class TransitioningCamera : MonoBehaviour
             if (hit.collider.CompareTag("Player"))
             {
                 Debug.DrawLine(transform.position, hit.point, Color.red);
+                player.transform.position = initialPos;
             }
             else
             {

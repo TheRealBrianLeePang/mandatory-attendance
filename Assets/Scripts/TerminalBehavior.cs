@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class TerminalBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    [SerializeField] GameObject controlledObject;
+    [SerializeField] GameObject player;
+    [SerializeField] float distance = 2.0f;
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(KeyCode.Space) && Vector2.Distance(player.transform.position, transform.position) < distance)
+        {
+            controlledObject.SetActive(false);
+        }
     }
 }
