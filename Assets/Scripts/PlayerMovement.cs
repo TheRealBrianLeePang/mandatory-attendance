@@ -19,11 +19,11 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeed = 6.0f;
     public float rotSpeed = 15.0f;
-    
-    public float terminalVelocity = -20.0f;
-    
 
-   
+    public float terminalVelocity = -20.0f;
+
+
+
     private ControllerColliderHit _contact;
 
     private CharacterController _charController;
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _charController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
-        
+
     }
 
     // Update is called once per frame
