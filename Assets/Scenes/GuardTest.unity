@@ -984,6 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeRemaining: 60
+  font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
 --- !u!4 &1116528890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1028832747303263182, guid: 35b93aa1a5d62429aa8c17250dd70b91,
