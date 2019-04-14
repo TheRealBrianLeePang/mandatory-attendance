@@ -9,10 +9,14 @@ public class RotatingCamera : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private Gradient okColor;
     [SerializeField] private Gradient dangerColor;
+    [SerializeField] private float minAngle = 0;
+    [SerializeField] private float maxAngle = 360;
 
     private float currentAngle = 0;
     private Vector2 initialPos;
     private LineRenderer lineRenderer;
+
+    private int incrementFactor = 1;
 
     void Start()
     {
@@ -39,7 +43,12 @@ public class RotatingCamera : MonoBehaviour
             }
         }
 
-        transform.Rotate(0, 0, rotationRate);
-        currentAngle += rotationRate;
+        transform.Rotate(0, 0, incrementFactor * rotationRate);
+        currentAngle += incrementFactor * rotationRate;
+
+        if(currentAngle >= maxAngle || currentAngle <= minAngle )
+        {
+            incrementFactor *= -1;
+        }
     }
 }
