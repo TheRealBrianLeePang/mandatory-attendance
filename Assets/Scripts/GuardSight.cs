@@ -7,6 +7,10 @@ public class GuardSight : MonoBehaviour
 
     [SerializeField] private float distance;
     [SerializeField] private GameObject player;
+    [SerializeField] private Gradient okColor;
+    [SerializeField] private Gradient cautionColor;
+    [SerializeField] private Gradient dangerColor;
+
     LineRenderer lineRenderer;
     Vector2 initialPlayerPosition;
 
@@ -28,21 +32,26 @@ public class GuardSight : MonoBehaviour
         //Debug.DrawLine(transform.position, hit.point, Color.green);
         //Debug.Log(transform.right);
         if(hit.collider != null) {
+            lineRenderer.SetPosition(0, transform.position);
+            lineRenderer.SetPosition(1, hit.point);
             if (hit.collider.CompareTag("Player"))
             {
                 if(Vector2.Distance(transform.position, hit.point) <= distance)
                 {
-                    Debug.DrawLine(transform.position, hit.point, Color.red);
+                    //Debug.DrawLine(transform.position, hit.point, Color.red);
+                    lineRenderer.colorGradient = dangerColor;
                     player.transform.position = initialPlayerPosition;
                 }
                 else
                 {
-                    Debug.DrawLine(transform.position, hit.point, Color.yellow);
+                    lineRenderer.colorGradient = cautionColor;
+                    //Debug.DrawLine(transform.position, hit.point, Color.yellow);
                 }
             }
             else
             {
-                Debug.DrawLine(transform.position, hit.point, Color.green);
+                lineRenderer.colorGradient = okColor;
+                //Debug.DrawLine(transform.position, hit.point, Color.green);
             }
         }
     }

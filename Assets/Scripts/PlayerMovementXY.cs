@@ -57,6 +57,7 @@ public class PlayerMovementXY : MonoBehaviour
         if (isColliding)
         {
             movement *= -3;
+            isColliding = false;
         }
 
         movement *= Time.deltaTime;
