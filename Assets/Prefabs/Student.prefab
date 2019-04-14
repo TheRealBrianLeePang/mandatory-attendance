@@ -104,3 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977dfd57300b34c4bbdf31868e110234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 5
+  player: {fileID: 0}
+  stairs: {fileID: 0}
