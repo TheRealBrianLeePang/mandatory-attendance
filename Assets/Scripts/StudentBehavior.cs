@@ -15,6 +15,7 @@ public class StudentBehavior : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && Vector2.Distance(player.transform.position, transform.position) < distance)
         {
             stairs.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }
