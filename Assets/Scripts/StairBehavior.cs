@@ -20,6 +20,8 @@ public class StairBehavior : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && Vector2.Distance(player.transform.position, transform.position) < distance)
         {
             Debug.Log("Stairs used");
+            AudioSource audio = player.GetComponent<AudioSource>();
+            audio.Play();
             Application.LoadLevel(nextScene);
         }
 

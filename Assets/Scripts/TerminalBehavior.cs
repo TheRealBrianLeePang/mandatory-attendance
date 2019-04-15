@@ -22,6 +22,9 @@ public class TerminalBehavior : MonoBehaviour
             controlledObject.SetActive(shouldMakeActive);
             shouldMakeActive = !shouldMakeActive;
             gameObject.SetActive(false);
+
+            AudioSource audio = player.GetComponent<AudioSource>();
+            audio.Play();
         }
     }
 }
