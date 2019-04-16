@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 64466e906f0d73845aa19ac276ec3c69
+guid: 74d6ea07d1324a84ca8736c1520e1dd0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -161,7 +161,7 @@ ModelImporter:
     4300006: Shoes
     4300008: Tops
     4300010: Bottoms
-    7400000: Walking
+    7400000: mixamo.com
     9500000: //RootNode
     13700000: Body
     13700002: Bottoms
@@ -169,127 +169,7 @@ ModelImporter:
     13700006: Eyes
     13700008: Shoes
     13700010: Tops
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bodymat
-    second: {fileID: 2100000, guid: 5f94a0ff6c5ed594dbc349714bc07356, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bottommat
-    second: {fileID: 2100000, guid: ea66c89eb3d2d5640b18885b6afddc05, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Shoesmat
-    second: {fileID: 2100000, guid: de3ed8f6b5984ed4f8b29def326e9c36, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Topmat
-    second: {fileID: 2100000, guid: ab230e372e39c4f4d973ef11b24b9ed2, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Body_Diffuse
-    second: {fileID: 2800000, guid: 2545f6e3cbfb31a4dac6e72e289ae974, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Body_Gloss
-    second: {fileID: 2800000, guid: 67482f6a4372d1041889a8ef981d444a, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Body_Normal
-    second: {fileID: 2800000, guid: fe6af38034d2f9a4a9a5610b9312736c, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Body_Opacity
-    second: {fileID: 2800000, guid: 3af7a3870547c5f4ba82a4d93fe3e14b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Body_Specular
-    second: {fileID: 2800000, guid: a53ca5c27b478284fbeb62784f15b370, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Bottom_Diffuse
-    second: {fileID: 2800000, guid: 6b4d8582311a88f4fbc7c03ee4cbd44f, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Bottom_Gloss
-    second: {fileID: 2800000, guid: a2eebb05642f5ae4c89dff397a54de77, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Bottom_Normal
-    second: {fileID: 2800000, guid: 793e09532238e914ea5c5a841cb46040, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Bottom_Opacity
-    second: {fileID: 2800000, guid: 4a08e3c3c001db840ab79e56512b3f3e, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Bottom_Specular
-    second: {fileID: 2800000, guid: 5dd18a519f1ecbe49b545baaa5065c96, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Shoes_Diffuse
-    second: {fileID: 2800000, guid: ba0cdd2284b9b444081da33dca351f3a, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Shoes_Gloss
-    second: {fileID: 2800000, guid: b32fcbbfe9cfd7e43860c48d13e66321, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Shoes_Normal
-    second: {fileID: 2800000, guid: 1d583fb500f7ced428e0fb536aabfa1b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Shoes_Opacity
-    second: {fileID: 2800000, guid: 5356b8c105cf8e64fa42b3332dddd0d4, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Shoes_Specular
-    second: {fileID: 2800000, guid: f20b50f417e29f64e8f49437d3fe7e3c, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Top_Diffuse
-    second: {fileID: 2800000, guid: 25719743832c8b44db7e420b57888727, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Top_Gloss
-    second: {fileID: 2800000, guid: 85d0db963f99b484e845900a4746a156, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Top_Normal
-    second: {fileID: 2800000, guid: 99bff8f34d40dc84991f57a8764d198f, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Top_Opacity
-    second: {fileID: 2800000, guid: 658fd3dc5109e8e45b1ea5b136bd8595, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Douglas_Top_Specular
-    second: {fileID: 2800000, guid: e02a31866e014fc4b94c19c5172575e7, type: 3}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -316,35 +196,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Walking
-      takeName: mixamo.com
-      firstFrame: 0
-      lastFrame: 62
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
