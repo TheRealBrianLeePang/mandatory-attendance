@@ -43,7 +43,7 @@ public class GuardMovement : MonoBehaviour
         {
             i = i >= guardPositions.Length? 0 : ++i;
             float rotationAngle = nextPosition.Equals(originalPosition) ? transformAngles[i] : firstAngle;
-            transform.Rotate(0, 0, rotationAngle);
+            transform.Rotate(0, rotationAngle, 0);
 
 
             previousPosition = this.transform.position;
