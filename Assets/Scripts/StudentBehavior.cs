@@ -17,8 +17,9 @@ public class StudentBehavior : MonoBehaviour
             stairs.SetActive(true);
             gameObject.SetActive(false);
 
-            AudioSource audio = player.GetComponent<AudioSource>();
-            audio.Play();
+            AudioSource[] audio = player.GetComponents<AudioSource>();
+            AudioSource interactSound = audio[0];
+            interactSound.Play();
         }
     }
 }

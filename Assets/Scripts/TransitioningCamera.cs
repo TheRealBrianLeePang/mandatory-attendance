@@ -34,6 +34,9 @@ public class TransitioningCamera : MonoBehaviour
             {
                 lineRenderer.colorGradient = dangerColor;
                 player.transform.position = initialPos;
+                AudioSource[] audio = player.GetComponents<AudioSource>();
+                AudioSource scream = audio[1];
+                scream.Play();
             }
             else
             {

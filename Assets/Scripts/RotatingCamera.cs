@@ -35,6 +35,9 @@ public class RotatingCamera : MonoBehaviour
             if (hit.collider.CompareTag("Player"))
             {
                 lineRenderer.colorGradient = dangerColor;
+                AudioSource[] audio = player.GetComponents<AudioSource>();
+                AudioSource interactSound = audio[0];
+                interactSound.Play();
                 player.transform.position = initialPos;
             }
             else
