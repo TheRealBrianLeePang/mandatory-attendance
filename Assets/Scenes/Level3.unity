@@ -2774,6 +2774,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1206402653}
+    - target: {fileID: 2558637433088697102, guid: ab9dda342aa074279af14c4166a48640,
+        type: 3}
+      propertyPath: nextScene
+      value: End Screen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab9dda342aa074279af14c4166a48640, type: 3}
 --- !u!1001 &1639816338
