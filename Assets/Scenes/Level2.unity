@@ -1452,6 +1452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eae7a88beabb44dea4d509d1f636b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 534669905}
   moveSpeed: 5
   rotSpeed: 15
   terminalVelocity: -20
