@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GuardTest.unity
     guid: 246fd15f0dd1345f093abd15c6937753
   - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: f1fcffbc7539c4a24955dd021d257973
+  - enabled: 1
     path: Assets/Scenes/End Screen.unity
     guid: bc6df1404e9c741b8a99bf90fb2013ec
   - enabled: 1
@@ -23,9 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: 05fc691c607fee643809c99ace4dd407
-  - enabled: 1
-    path: Assets/Scenes/Start.unity
-    guid: f1fcffbc7539c4a24955dd021d257973
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: b9e63160cd3244bc987f903b0120ebc4
