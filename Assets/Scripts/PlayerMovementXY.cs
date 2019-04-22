@@ -7,7 +7,7 @@ using UnityEngine;
 // Like playerMovement but on a different plane, used for test purposes only
 public class PlayerMovementXY : MonoBehaviour
 {
-    //[SerializeField] private Transform target;
+    [SerializeField] private Transform target;
 
     public float moveSpeed = 6000.0f;
     public float rotSpeed = 15.0f;
@@ -39,16 +39,16 @@ public class PlayerMovementXY : MonoBehaviour
             movement.y = vertInput * moveSpeed;
             movement = Vector3.ClampMagnitude(movement, moveSpeed);
 
-            //Quaternion tmp = target.rotation;
-            //target.eulerAngles = new Vector3(0, target.eulerAngles.y, 0);
-            //movement = target.TransformDirection(movement);
-            //target.rotation = tmp;
+            Quaternion tmp = target.rotation;
+            target.eulerAngles = new Vector3(0, target.eulerAngles.y, 0);
+            movement = target.TransformDirection(movement);
+            target.rotation = tmp;
 
-            // face movement direction
-            //transform.rotation = Quaternion.LookRotation(movement);
-            //Quaternion direction = Quaternion.LookRotation(movement);
-            //transform.rotation = Quaternion.Lerp(transform.rotation,
-                                                 //direction, rotSpeed * Time.deltaTime);
+             //face movement direction
+            transform.rotation = Quaternion.LookRotation(movement);
+            Quaternion direction = Quaternion.LookRotation(movement);
+            transform.rotation = Quaternion.Lerp(transform.rotation,
+                                                 direction, rotSpeed * Time.deltaTime);
 
 
         }
