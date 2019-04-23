@@ -11,6 +11,7 @@ public class RotatingCamera : MonoBehaviour
     [SerializeField] private Gradient dangerColor;
     [SerializeField] private float minAngle = 0;
     [SerializeField] private float maxAngle = 360;
+    [SerializeField] private GameObject deathAudio;
 
     private float currentAngle = 0;
     private Vector2 initialPos;
@@ -35,8 +36,8 @@ public class RotatingCamera : MonoBehaviour
             if (hit.collider.CompareTag("Player"))
             {
                 lineRenderer.colorGradient = dangerColor;
-                AudioSource[] audio = player.GetComponents<AudioSource>();
-                AudioSource scream = audio[1];
+                AudioSource[] audio = deathAudio.GetComponents<AudioSource>();
+                AudioSource scream = audio[Random.Range(0, audio.Length-1)];
                 scream.Play();
                 player.transform.position = initialPos;
             }

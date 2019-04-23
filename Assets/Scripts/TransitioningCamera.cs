@@ -9,6 +9,7 @@ public class TransitioningCamera : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private Gradient okColor;
     [SerializeField] private Gradient dangerColor;
+    [SerializeField] private GameObject deathAudio;
 
     private float currTime = 0;
     private Vector2 initialPos;
@@ -34,8 +35,8 @@ public class TransitioningCamera : MonoBehaviour
             {
                 lineRenderer.colorGradient = dangerColor;
                 player.transform.position = initialPos;
-                AudioSource[] audio = player.GetComponents<AudioSource>();
-                AudioSource scream = audio[1];
+                AudioSource[] audio = deathAudio.GetComponents<AudioSource>();
+                AudioSource scream = audio[Random.Range(0, audio.Length-1)];
                 scream.Play();
             }
             else

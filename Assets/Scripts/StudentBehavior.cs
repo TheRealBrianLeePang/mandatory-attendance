@@ -8,6 +8,7 @@ public class StudentBehavior : MonoBehaviour
     [SerializeField] private float distance = 2.0f;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject stairs;
+    [SerializeField] private GameObject sounds;
 
     // Update is called once per frame
     void Update()
@@ -17,8 +18,8 @@ public class StudentBehavior : MonoBehaviour
             stairs.SetActive(true);
             gameObject.SetActive(false);
 
-            AudioSource[] audio = player.GetComponents<AudioSource>();
-            AudioSource interactSound = audio[0];
+            AudioSource[] audio = sounds.GetComponents<AudioSource>();
+            AudioSource interactSound = audio[Random.Range(0, audio.Length-1)];
             interactSound.Play();
         }
     }
