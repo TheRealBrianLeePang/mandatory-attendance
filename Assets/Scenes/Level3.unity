@@ -1728,6 +1728,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a,
         type: 3}
+    - target: {fileID: 4659613884316584791, guid: c00954aa1002645d693a5c38324f0c66,
+        type: 3}
+      propertyPath: sceneName
+      value: Level3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c00954aa1002645d693a5c38324f0c66, type: 3}
 --- !u!1 &641018138
@@ -2309,7 +2314,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 26
+  field of view: 32
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
