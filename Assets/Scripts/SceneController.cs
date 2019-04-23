@@ -15,7 +15,7 @@ public class SceneController : MonoBehaviour
         timeRemaining -= Time.deltaTime;
         GUI.color = Color.white;
         GUI.skin.font = font;
-        GUI.Label(new Rect(150, 150, 2000, 2000), "Time remaining: " + timeRemaining.ToString(), style);
+        GUI.Label(new Rect(10, 10, 20, 20), "Time remaining: " + timeRemaining.ToString(), style);
         if (timeRemaining <= 0)
         {
             Application.LoadLevel(sceneName);
