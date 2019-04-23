@@ -11,12 +11,12 @@ public class PlayerMovementXY : MonoBehaviour
 
     public float moveSpeed = 6000.0f;
     public float rotSpeed = 15.0f;
-
+    
     public float terminalVelocity = -20.0f;
 
     private bool isColliding;
     private Rigidbody2D rigidbody;
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +43,12 @@ public class PlayerMovementXY : MonoBehaviour
             target.eulerAngles = new Vector3(0, target.eulerAngles.y, 0);
             movement = target.TransformDirection(movement);
             target.rotation = tmp;
+
+             //face movement direction
+            transform.rotation = Quaternion.LookRotation(movement);
+            Quaternion direction = Quaternion.LookRotation(movement);
+            transform.rotation = Quaternion.Lerp(transform.rotation,
+                                                 direction, rotSpeed * Time.deltaTime);
 
 
         }
