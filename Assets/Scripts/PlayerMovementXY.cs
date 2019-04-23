@@ -44,12 +44,12 @@ public class PlayerMovementXY : MonoBehaviour
             movement = target.TransformDirection(movement);
             target.rotation = tmp;
 
-            /*
-            //face movement direction
+             //face movement direction
             transform.rotation = Quaternion.LookRotation(movement);
             Quaternion direction = Quaternion.LookRotation(movement);
-            transform.rotation = Quaternion.Lerp(transform.rotation, direction, rotSpeed * Time.deltaTime);
-            */
+            transform.rotation = Quaternion.Lerp(transform.rotation,
+                                                 direction, rotSpeed * Time.deltaTime);
+
 
         }
 
