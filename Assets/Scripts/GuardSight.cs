@@ -10,6 +10,7 @@ public class GuardSight : MonoBehaviour
     [SerializeField] private Gradient okColor;
     [SerializeField] private Gradient cautionColor;
     [SerializeField] private Gradient dangerColor;
+    [SerializeField] private GameObject deathAudio;
 
     LineRenderer lineRenderer;
     Vector2 initialPlayerPosition;
@@ -41,8 +42,8 @@ public class GuardSight : MonoBehaviour
                     //Debug.DrawLine(transform.position, hit.point, Color.red);
                     lineRenderer.colorGradient = dangerColor;
                     player.transform.position = initialPlayerPosition;
-                    AudioSource[] audio = player.GetComponents<AudioSource>();
-                    AudioSource scream = audio[1];
+                    AudioSource[] audio = deathAudio.GetComponents<AudioSource>();
+                    AudioSource scream = audio[Random.Range(0, audio.Length-1)];
                     scream.Play();
                 }
                 else
