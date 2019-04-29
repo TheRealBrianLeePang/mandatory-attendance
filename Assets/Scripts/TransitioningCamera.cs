@@ -38,6 +38,8 @@ public class TransitioningCamera : MonoBehaviour
                 AudioSource[] audio = deathAudio.GetComponents<AudioSource>();
                 AudioSource scream = audio[Random.Range(0, audio.Length-1)];
                 scream.Play();
+
+
             }
             else
             {
