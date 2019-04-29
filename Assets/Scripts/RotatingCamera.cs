@@ -38,8 +38,8 @@ public class RotatingCamera : MonoBehaviour
                 lineRenderer.colorGradient = dangerColor;
                 AudioSource[] audio = deathAudio.GetComponents<AudioSource>();
                 AudioSource scream = audio[Random.Range(0, audio.Length-1)];
-                scream.Play();
-                player.transform.position = initialPos;
+          
+                StartCoroutine(PlayerCharacter.Die(player, initialPos, scream));
             }
             else
             {

@@ -41,13 +41,12 @@ public class GuardSight : MonoBehaviour
                 {
                     //Debug.DrawLine(transform.position, hit.point, Color.red);
                     lineRenderer.colorGradient = dangerColor;
-                    player.transform.position = initialPlayerPosition;
                     AudioSource[] audio = deathAudio.GetComponents<AudioSource>();
                     AudioSource scream = audio[Random.Range(0, audio.Length-1)];
-                    scream.Play();
+                    StartCoroutine(PlayerCharacter.Die(player, initialPlayerPosition, scream));
                 }
                 else
-                {
+                { 
                     lineRenderer.colorGradient = cautionColor;
                     //Debug.DrawLine(transform.position, hit.point, Color.yellow);
                 }

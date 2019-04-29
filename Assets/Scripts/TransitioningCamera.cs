@@ -34,12 +34,9 @@ public class TransitioningCamera : MonoBehaviour
             if (hit.collider.CompareTag("Player"))
             {
                 lineRenderer.colorGradient = dangerColor;
-                player.transform.position = initialPos;
                 AudioSource[] audio = deathAudio.GetComponents<AudioSource>();
                 AudioSource scream = audio[Random.Range(0, audio.Length-1)];
-                scream.Play();
-
-
+                StartCoroutine(PlayerCharacter.Die(player, initialPos, scream));
             }
             else
             {
@@ -58,4 +55,6 @@ public class TransitioningCamera : MonoBehaviour
             }
         }
     }
+
+   
 }
