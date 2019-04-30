@@ -29,10 +29,11 @@ public class PlayerCharacter : MonoBehaviour
         }
         isAlreadyDying = true;
         player.GetComponent<PlayerMovementXY>().enabled = false;
-        yield return new WaitForSeconds(1f);
-        AnAnimator.SetBool("killed", false);
+        AnAnimator.SetBool("killed", true);
+        yield return new WaitForSeconds(3f);
         player.transform.position = initialPos;
         isAlreadyDying = false;
         player.GetComponent<PlayerMovementXY>().enabled = true;
+        AnAnimator.SetBool("killed", false);
     }
 }

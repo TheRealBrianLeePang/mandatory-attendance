@@ -11,6 +11,7 @@ public class GuardSight : MonoBehaviour
     [SerializeField] private Gradient cautionColor;
     [SerializeField] private Gradient dangerColor;
     [SerializeField] private GameObject deathAudio;
+    private Animator my_animator;
 
     LineRenderer lineRenderer;
     Vector2 initialPlayerPosition;
@@ -21,11 +22,13 @@ public class GuardSight : MonoBehaviour
     {
         initialPlayerPosition = player.transform.position;
         lineRenderer = GetComponent<LineRenderer>();
+        my_animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        my_animator.SetBool("punch", false);
         //Debug.Log("transform.right = " + transform.right);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 100);
         //Debug.Log("Hit.point=" + hit.point);
@@ -43,10 +46,12 @@ public class GuardSight : MonoBehaviour
                     lineRenderer.colorGradient = dangerColor;
                     AudioSource[] audio = deathAudio.GetComponents<AudioSource>();
                     AudioSource scream = audio[Random.Range(0, audio.Length-1)];
+                    my_animator.SetBool("punch", true);
                     StartCoroutine(PlayerCharacter.Die(player, initialPlayerPosition, scream));
                 }
                 else
-                { 
+                {
+                    my_animator.SetBool("punch", false);
                     lineRenderer.colorGradient = cautionColor;
                     //Debug.DrawLine(transform.position, hit.point, Color.yellow);
                 }
