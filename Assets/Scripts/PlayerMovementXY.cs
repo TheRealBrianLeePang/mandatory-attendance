@@ -45,6 +45,7 @@ public class PlayerMovementXY : MonoBehaviour
         float vertInput = Input.GetAxis("Vertical");
 
         AnAnimator.SetBool("KeyPressed", false);
+        AnAnimator.SetBool("killed", false);
 
         if (horInput != 0 || vertInput != 0)
         {
